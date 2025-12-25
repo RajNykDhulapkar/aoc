@@ -57,7 +57,7 @@ def part2(data: str) -> int:
             pos = new_pos % 100
         else:
             new_pos = pos - d
-            if new_pos < 0:
+            if pos != 0 and new_pos <= 0:
                 ans += 1
                 debug(f"  Passed over 0! going left Total so far: {ans}")
 
